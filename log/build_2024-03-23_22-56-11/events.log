@@ -1,0 +1,134 @@
+[0.000000] (-) TimerEvent: {}
+[0.002372] (pwm_msg) JobQueued: {'identifier': 'pwm_msg', 'dependencies': OrderedDict()}
+[0.002565] (ros_to_serial) JobQueued: {'identifier': 'ros_to_serial', 'dependencies': OrderedDict()}
+[0.002656] (pwm_msg) JobStarted: {'identifier': 'pwm_msg'}
+[0.042482] (ros_to_serial) JobStarted: {'identifier': 'ros_to_serial'}
+[0.098962] (-) TimerEvent: {}
+[0.199686] (-) TimerEvent: {}
+[0.300468] (-) TimerEvent: {}
+[0.401208] (-) TimerEvent: {}
+[0.502001] (-) TimerEvent: {}
+[0.602676] (-) TimerEvent: {}
+[0.703395] (-) TimerEvent: {}
+[0.804181] (-) TimerEvent: {}
+[0.904870] (-) TimerEvent: {}
+[1.005678] (-) TimerEvent: {}
+[1.106461] (-) TimerEvent: {}
+[1.207272] (-) TimerEvent: {}
+[1.308157] (-) TimerEvent: {}
+[1.409260] (-) TimerEvent: {}
+[1.510116] (-) TimerEvent: {}
+[1.610974] (-) TimerEvent: {}
+[1.712571] (-) TimerEvent: {}
+[1.813378] (-) TimerEvent: {}
+[1.914153] (-) TimerEvent: {}
+[2.014841] (-) TimerEvent: {}
+[2.115547] (-) TimerEvent: {}
+[2.216216] (-) TimerEvent: {}
+[2.317004] (-) TimerEvent: {}
+[2.417735] (-) TimerEvent: {}
+[2.518432] (-) TimerEvent: {}
+[2.619169] (-) TimerEvent: {}
+[2.720154] (-) TimerEvent: {}
+[2.822120] (-) TimerEvent: {}
+[2.923924] (-) TimerEvent: {}
+[3.025213] (-) TimerEvent: {}
+[3.126125] (-) TimerEvent: {}
+[3.227598] (-) TimerEvent: {}
+[3.328328] (-) TimerEvent: {}
+[3.429076] (-) TimerEvent: {}
+[3.529915] (-) TimerEvent: {}
+[3.630788] (-) TimerEvent: {}
+[3.731817] (-) TimerEvent: {}
+[3.832666] (-) TimerEvent: {}
+[3.933431] (-) TimerEvent: {}
+[4.034208] (-) TimerEvent: {}
+[4.135023] (-) TimerEvent: {}
+[4.235906] (-) TimerEvent: {}
+[4.336715] (-) TimerEvent: {}
+[4.437553] (-) TimerEvent: {}
+[4.538717] (-) TimerEvent: {}
+[4.642090] (-) TimerEvent: {}
+[4.726647] (ros_to_serial) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/irl/robot_ws_raps/build/ros_to_serial/build', '--no-deps', 'symlink_data'], 'cwd': '/home/irl/robot_ws_raps/build/ros_to_serial', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'irl', 'SSH_CLIENT': '192.168.0.144 62805 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/irl', 'OLDPWD': '/home/irl', 'TERM_PROGRAM_VERSION': '1.87.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4a9bce5c-a631-4719-8b90-6a4b164d0aef.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/irl/robot_ws_raps/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'irl', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/remote-cli:/home/irl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-74877afadb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/irl/robot_ws_raps/install/ros_to_serial:/home/irl/robot_ws_raps/install/pwm_msg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/irl/robot_ws_raps/build/ros_to_serial', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.144 62805 192.168.0.143 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/irl/robot_ws_raps/build/ros_to_serial/prefix_override:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/ros_to_serial:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/pwm_msg:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1'}, 'shell': False}
+[4.746102] (-) TimerEvent: {}
+[4.773785] (pwm_msg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/irl/robot_ws_raps/build/pwm_msg/build', '--no-deps', 'symlink_data'], 'cwd': '/home/irl/robot_ws_raps/build/pwm_msg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'irl', 'SSH_CLIENT': '192.168.0.144 62805 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/irl', 'OLDPWD': '/home/irl', 'TERM_PROGRAM_VERSION': '1.87.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4a9bce5c-a631-4719-8b90-6a4b164d0aef.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/irl/robot_ws_raps/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'irl', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/remote-cli:/home/irl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-74877afadb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/irl/robot_ws_raps/install/ros_to_serial:/home/irl/robot_ws_raps/install/pwm_msg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/irl/robot_ws_raps/build/pwm_msg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.144 62805 192.168.0.143 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/irl/robot_ws_raps/build/pwm_msg/prefix_override:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/ros_to_serial:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/pwm_msg:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1'}, 'shell': False}
+[4.846363] (-) TimerEvent: {}
+[4.948222] (-) TimerEvent: {}
+[5.050050] (-) TimerEvent: {}
+[5.150822] (-) TimerEvent: {}
+[5.251592] (-) TimerEvent: {}
+[5.287542] (pwm_msg) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[5.288483] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/robot_ws_raps/build/pwm_msg/setup.py", line 1, in <module>\n'}
+[5.288851] (ros_to_serial) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[5.289469] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/robot_ws_raps/build/ros_to_serial/setup.py", line 1, in <module>\n'}
+[5.290340] (pwm_msg) StderrLine: {'line': b'    from setuptools import find_packages, setup\n'}
+[5.291223] (ros_to_serial) StderrLine: {'line': b'    from setuptools import find_packages, setup\n'}
+[5.300223] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 16, in <module>\n'}
+[5.303523] (ros_to_serial) StderrLine: {'line': b'    import setuptools.version\n'}
+[5.307600] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/setuptools/version.py", line 1, in <module>\n'}
+[5.310084] (ros_to_serial) StderrLine: {'line': b'    import pkg_resources\n'}
+[5.312460] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3243, in <module>\n'}
+[5.314705] (ros_to_serial) StderrLine: {'line': b'    def _initialize_master_working_set():\n'}
+[5.317003] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3226, in _call_aside\n'}
+[5.319205] (ros_to_serial) StderrLine: {'line': b'    f(*args, **kwargs)\n'}
+[5.321886] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3255, in _initialize_master_working_set\n'}
+[5.325135] (ros_to_serial) StderrLine: {'line': b'    working_set = WorkingSet._build_master()\n'}
+[5.327250] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 559, in _build_master\n'}
+[5.330108] (ros_to_serial) StderrLine: {'line': b'    ws = cls()\n'}
+[5.333486] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 552, in __init__\n'}
+[5.340196] (ros_to_serial) StderrLine: {'line': b'    self.add_entry(entry)\n'}
+[5.342589] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 608, in add_entry\n'}
+[5.344703] (ros_to_serial) StderrLine: {'line': b'    for dist in find_distributions(entry, True):\n'}
+[5.346623] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2063, in find_on_path\n'}
+[5.348819] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 16, in <module>\n'}
+[5.350770] (pwm_msg) StderrLine: {'line': b'    import setuptools.version\n'}
+[5.352764] (-) TimerEvent: {}
+[5.356358] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/setuptools/version.py", line 1, in <module>\n'}
+[5.358028] (pwm_msg) StderrLine: {'line': b'    import pkg_resources\n'}
+[5.369024] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3243, in <module>\n'}
+[5.370871] (pwm_msg) StderrLine: {'line': b'    def _initialize_master_working_set():\n'}
+[5.372585] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3226, in _call_aside\n'}
+[5.381503] (pwm_msg) StderrLine: {'line': b'    f(*args, **kwargs)\n'}
+[5.386139] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3255, in _initialize_master_working_set\n'}
+[5.391098] (pwm_msg) StderrLine: {'line': b'    working_set = WorkingSet._build_master()\n'}
+[5.393286] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 559, in _build_master\n'}
+[5.395160] (pwm_msg) StderrLine: {'line': b'    ws = cls()\n'}
+[5.400739] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 552, in __init__\n'}
+[5.402136] (pwm_msg) StderrLine: {'line': b'    self.add_entry(entry)\n'}
+[5.403361] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 608, in add_entry\n'}
+[5.404599] (ros_to_serial) StderrLine: {'line': b'    for dist in factory(fullpath):\n'}
+[5.406037] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2128, in distributions_from_metadata\n'}
+[5.407944] (ros_to_serial) StderrLine: {'line': b'    yield Distribution.from_location(\n'}
+[5.409671] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2591, in from_location\n'}
+[5.410929] (ros_to_serial) StderrLine: {'line': b'    )._reload_version()\n'}
+[5.412117] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2989, in _reload_version\n'}
+[5.413938] (ros_to_serial) StderrLine: {'line': b'    md_version = self._get_version()\n'}
+[5.417885] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2770, in _get_version\n'}
+[5.419679] (pwm_msg) StderrLine: {'line': b'    for dist in find_distributions(entry, True):\n'}
+[5.422185] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2063, in find_on_path\n'}
+[5.425553] (pwm_msg) StderrLine: {'line': b'    for dist in factory(fullpath):\n'}
+[5.426407] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2128, in distributions_from_metadata\n'}
+[5.426844] (pwm_msg) StderrLine: {'line': b'    yield Distribution.from_location(\n'}
+[5.427213] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2588, in from_location\n'}
+[5.428506] (pwm_msg) StderrLine: {'line': b'    return cls(\n'}
+[5.429067] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2569, in __init__\n'}
+[5.429612] (pwm_msg) StderrLine: {'line': b'    self._version = safe_version(version)\n'}
+[5.430024] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 1318, in safe_version\n'}
+[5.430389] (ros_to_serial) StderrLine: {'line': b'    version = _version_from_file(lines)\n'}
+[5.430765] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2556, in _version_from_file\n'}
+[5.431153] (ros_to_serial) StderrLine: {'line': b'    return safe_version(value.strip()) or None\n'}
+[5.431553] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 1318, in safe_version\n'}
+[5.431914] (pwm_msg) StderrLine: {'line': b'    return str(packaging.version.Version(version))\n'}
+[5.432198] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 321, in __str__\n'}
+[5.432497] (pwm_msg) StderrLine: {'line': b'    if self.post is not None:\n'}
+[5.432886] (pwm_msg) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 355, in post\n'}
+[5.433300] (pwm_msg) StderrLine: {'line': b'    return self._version.post[1] if self._version.post else None\n'}
+[5.433610] (pwm_msg) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[5.433872] (ros_to_serial) StderrLine: {'line': b'    return str(packaging.version.Version(version))\n'}
+[5.434141] (ros_to_serial) StderrLine: {'line': b'  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 314, in __str__\n'}
+[5.434399] (ros_to_serial) StderrLine: {'line': b'    parts.append(".".join(str(x) for x in self.release))\n'}
+[5.434650] (ros_to_serial) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[5.434904] (pwm_msg) CommandEnded: {'returncode': -2}
+[5.435960] (pwm_msg) JobEnded: {'identifier': 'pwm_msg', 'rc': 'SIGINT'}
+[5.437505] (ros_to_serial) JobEnded: {'identifier': 'ros_to_serial', 'rc': 'SIGINT'}
+[5.440309] (-) EventReactorShutdown: {}

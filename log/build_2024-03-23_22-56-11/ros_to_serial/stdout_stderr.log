@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/home/irl/robot_ws_raps/build/ros_to_serial/setup.py", line 1, in <module>
+    from setuptools import find_packages, setup
+  File "/home/irl/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/home/irl/.local/lib/python3.10/site-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3243, in <module>
+    def _initialize_master_working_set():
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3226, in _call_aside
+    f(*args, **kwargs)
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3255, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 559, in _build_master
+    ws = cls()
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 552, in __init__
+    self.add_entry(entry)
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 608, in add_entry
+    for dist in find_distributions(entry, True):
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2063, in find_on_path
+    for dist in factory(fullpath):
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2128, in distributions_from_metadata
+    yield Distribution.from_location(
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2591, in from_location
+    )._reload_version()
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2989, in _reload_version
+    md_version = self._get_version()
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2770, in _get_version
+    version = _version_from_file(lines)
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2556, in _version_from_file
+    return safe_version(value.strip()) or None
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 1318, in safe_version
+    return str(packaging.version.Version(version))
+  File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 314, in __str__
+    parts.append(".".join(str(x) for x in self.release))
+KeyboardInterrupt

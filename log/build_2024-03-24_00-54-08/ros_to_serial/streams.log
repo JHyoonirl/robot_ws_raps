@@ -1,0 +1,18 @@
+[4.731s] Invoking command in '/home/irl/robot_ws_raps/build/ros_to_serial': PYTHONPATH=/home/irl/robot_ws_raps/build/ros_to_serial/prefix_override:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/irl/robot_ws_raps/build/ros_to_serial/build --no-deps symlink_data
+[6.224s] running develop
+[7.211s] running egg_info
+[7.213s] writing ros_to_serial.egg-info/PKG-INFO
+[7.219s] writing dependency_links to ros_to_serial.egg-info/dependency_links.txt
+[7.220s] writing entry points to ros_to_serial.egg-info/entry_points.txt
+[7.221s] writing requirements to ros_to_serial.egg-info/requires.txt
+[7.221s] writing top-level names to ros_to_serial.egg-info/top_level.txt
+[7.228s] reading manifest file 'ros_to_serial.egg-info/SOURCES.txt'
+[7.230s] writing manifest file 'ros_to_serial.egg-info/SOURCES.txt'
+[7.233s] running build_ext
+[7.235s] Creating /home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages/ros-to-serial.egg-link (link to .)
+[7.243s] Installing serial_read script to /home/irl/robot_ws_raps/install/ros_to_serial/lib/ros_to_serial
+[7.244s] Installing serial_write script to /home/irl/robot_ws_raps/install/ros_to_serial/lib/ros_to_serial
+[7.245s] 
+[7.246s] Installed /home/irl/robot_ws_raps/build/ros_to_serial
+[7.248s] running symlink_data
+[7.455s] Invoked command in '/home/irl/robot_ws_raps/build/ros_to_serial' returned '0': PYTHONPATH=/home/irl/robot_ws_raps/build/ros_to_serial/prefix_override:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/irl/robot_ws_raps/build/ros_to_serial/build --no-deps symlink_data

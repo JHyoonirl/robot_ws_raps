@@ -1,0 +1,119 @@
+[0.000000] (-) TimerEvent: {}
+[0.001097] (pwm_msg) JobQueued: {'identifier': 'pwm_msg', 'dependencies': OrderedDict()}
+[0.002034] (ros_to_serial) JobQueued: {'identifier': 'ros_to_serial', 'dependencies': OrderedDict()}
+[0.002622] (pwm_msg) JobStarted: {'identifier': 'pwm_msg'}
+[0.040976] (ros_to_serial) JobStarted: {'identifier': 'ros_to_serial'}
+[0.099107] (-) TimerEvent: {}
+[0.199841] (-) TimerEvent: {}
+[0.300666] (-) TimerEvent: {}
+[0.401467] (-) TimerEvent: {}
+[0.502226] (-) TimerEvent: {}
+[0.602918] (-) TimerEvent: {}
+[0.703638] (-) TimerEvent: {}
+[0.804403] (-) TimerEvent: {}
+[0.905093] (-) TimerEvent: {}
+[1.005838] (-) TimerEvent: {}
+[1.106556] (-) TimerEvent: {}
+[1.207293] (-) TimerEvent: {}
+[1.308267] (-) TimerEvent: {}
+[1.409503] (-) TimerEvent: {}
+[1.510428] (-) TimerEvent: {}
+[1.611147] (-) TimerEvent: {}
+[1.711911] (-) TimerEvent: {}
+[1.812603] (-) TimerEvent: {}
+[1.913315] (-) TimerEvent: {}
+[2.014076] (-) TimerEvent: {}
+[2.114801] (-) TimerEvent: {}
+[2.215549] (-) TimerEvent: {}
+[2.316346] (-) TimerEvent: {}
+[2.417166] (-) TimerEvent: {}
+[2.517956] (-) TimerEvent: {}
+[2.618792] (-) TimerEvent: {}
+[2.719983] (-) TimerEvent: {}
+[2.821612] (-) TimerEvent: {}
+[2.922531] (-) TimerEvent: {}
+[3.023524] (-) TimerEvent: {}
+[3.124402] (-) TimerEvent: {}
+[3.225172] (-) TimerEvent: {}
+[3.325904] (-) TimerEvent: {}
+[3.426682] (-) TimerEvent: {}
+[3.527448] (-) TimerEvent: {}
+[3.628246] (-) TimerEvent: {}
+[3.729182] (-) TimerEvent: {}
+[3.830016] (-) TimerEvent: {}
+[3.930787] (-) TimerEvent: {}
+[4.031909] (-) TimerEvent: {}
+[4.132863] (-) TimerEvent: {}
+[4.233696] (-) TimerEvent: {}
+[4.334484] (-) TimerEvent: {}
+[4.435678] (-) TimerEvent: {}
+[4.537944] (-) TimerEvent: {}
+[4.640064] (-) TimerEvent: {}
+[4.657803] (pwm_msg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/irl/robot_ws_raps/build/pwm_msg/build', '--no-deps', 'symlink_data'], 'cwd': '/home/irl/robot_ws_raps/build/pwm_msg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'irl', 'SSH_CLIENT': '192.168.0.144 62805 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/irl', 'OLDPWD': '/home/irl/robot_ws_raps', 'TERM_PROGRAM_VERSION': '1.87.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-f4d501ed-eb6b-4eae-b16a-2ffbc79dd54c.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/irl/robot_ws_raps/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'irl', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/remote-cli:/home/irl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-74877afadb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/irl/robot_ws_raps/install/ros_to_serial:/home/irl/robot_ws_raps/install/pwm_msg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/irl/robot_ws_raps/build/pwm_msg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.144 62805 192.168.0.143 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/irl/robot_ws_raps/build/pwm_msg/prefix_override:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/ros_to_serial:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/pwm_msg:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1'}, 'shell': False}
+[4.675989] (ros_to_serial) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/irl/robot_ws_raps/build/ros_to_serial/build', '--no-deps', 'symlink_data'], 'cwd': '/home/irl/robot_ws_raps/build/ros_to_serial', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'irl', 'SSH_CLIENT': '192.168.0.144 62805 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/irl', 'OLDPWD': '/home/irl/robot_ws_raps', 'TERM_PROGRAM_VERSION': '1.87.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-f4d501ed-eb6b-4eae-b16a-2ffbc79dd54c.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/irl/robot_ws_raps/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'irl', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/irl/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/bin/remote-cli:/home/irl/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-74877afadb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/irl/robot_ws_raps/install/ros_to_serial:/home/irl/robot_ws_raps/install/pwm_msg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/irl/robot_ws_raps/build/ros_to_serial', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.144 62805 192.168.0.143 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/irl/robot_ws_raps/build/ros_to_serial/prefix_override:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/ros_to_serial:/home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages:/home/irl/robot_ws_raps/build/pwm_msg:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1'}, 'shell': False}
+[4.740218] (-) TimerEvent: {}
+[4.842283] (-) TimerEvent: {}
+[4.943099] (-) TimerEvent: {}
+[5.044342] (-) TimerEvent: {}
+[5.145138] (-) TimerEvent: {}
+[5.245852] (-) TimerEvent: {}
+[5.346734] (-) TimerEvent: {}
+[5.447487] (-) TimerEvent: {}
+[5.548221] (-) TimerEvent: {}
+[5.648900] (-) TimerEvent: {}
+[5.749590] (-) TimerEvent: {}
+[5.850369] (-) TimerEvent: {}
+[5.951278] (-) TimerEvent: {}
+[6.052719] (-) TimerEvent: {}
+[6.153566] (-) TimerEvent: {}
+[6.184675] (pwm_msg) StdoutLine: {'line': b'running develop\n'}
+[6.216016] (ros_to_serial) StdoutLine: {'line': b'running develop\n'}
+[6.253731] (-) TimerEvent: {}
+[6.354486] (-) TimerEvent: {}
+[6.455727] (-) TimerEvent: {}
+[6.556504] (-) TimerEvent: {}
+[6.657254] (-) TimerEvent: {}
+[6.758037] (-) TimerEvent: {}
+[6.858844] (-) TimerEvent: {}
+[6.959595] (-) TimerEvent: {}
+[7.060397] (-) TimerEvent: {}
+[7.161145] (-) TimerEvent: {}
+[7.219615] (pwm_msg) StdoutLine: {'line': b'running egg_info\n'}
+[7.220488] (pwm_msg) StdoutLine: {'line': b'writing pwm_msg.egg-info/PKG-INFO\n'}
+[7.221844] (pwm_msg) StdoutLine: {'line': b'writing dependency_links to pwm_msg.egg-info/dependency_links.txt\n'}
+[7.223061] (pwm_msg) StdoutLine: {'line': b'writing entry points to pwm_msg.egg-info/entry_points.txt\n'}
+[7.224322] (pwm_msg) StdoutLine: {'line': b'writing requirements to pwm_msg.egg-info/requires.txt\n'}
+[7.225388] (pwm_msg) StdoutLine: {'line': b'writing top-level names to pwm_msg.egg-info/top_level.txt\n'}
+[7.233836] (pwm_msg) StdoutLine: {'line': b"reading manifest file 'pwm_msg.egg-info/SOURCES.txt'\n"}
+[7.237012] (pwm_msg) StdoutLine: {'line': b"writing manifest file 'pwm_msg.egg-info/SOURCES.txt'\n"}
+[7.243288] (pwm_msg) StdoutLine: {'line': b'running build_ext\n'}
+[7.244303] (pwm_msg) StdoutLine: {'line': b'Creating /home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages/pwm-msg.egg-link (link to .)\n'}
+[7.248030] (pwm_msg) StdoutLine: {'line': b'Installing pwm_subscriber script to /home/irl/robot_ws_raps/install/pwm_msg/lib/pwm_msg\n'}
+[7.249520] (pwm_msg) StdoutLine: {'line': b'\n'}
+[7.250303] (pwm_msg) StdoutLine: {'line': b'Installed /home/irl/robot_ws_raps/build/pwm_msg\n'}
+[7.250776] (pwm_msg) StdoutLine: {'line': b'running symlink_data\n'}
+[7.261453] (-) TimerEvent: {}
+[7.348105] (ros_to_serial) StdoutLine: {'line': b'running egg_info\n'}
+[7.350095] (ros_to_serial) StdoutLine: {'line': b'writing ros_to_serial.egg-info/PKG-INFO\n'}
+[7.353884] (ros_to_serial) StdoutLine: {'line': b'writing dependency_links to ros_to_serial.egg-info/dependency_links.txt\n'}
+[7.357164] (ros_to_serial) StdoutLine: {'line': b'writing entry points to ros_to_serial.egg-info/entry_points.txt\n'}
+[7.361374] (ros_to_serial) StdoutLine: {'line': b'writing requirements to ros_to_serial.egg-info/requires.txt\n'}
+[7.363173] (-) TimerEvent: {}
+[7.364992] (ros_to_serial) StdoutLine: {'line': b'writing top-level names to ros_to_serial.egg-info/top_level.txt\n'}
+[7.386347] (ros_to_serial) StdoutLine: {'line': b"reading manifest file 'ros_to_serial.egg-info/SOURCES.txt'\n"}
+[7.398021] (ros_to_serial) StdoutLine: {'line': b"writing manifest file 'ros_to_serial.egg-info/SOURCES.txt'\n"}
+[7.417088] (ros_to_serial) StdoutLine: {'line': b'running build_ext\n'}
+[7.419819] (ros_to_serial) StdoutLine: {'line': b'Creating /home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages/ros-to-serial.egg-link (link to .)\n'}
+[7.428669] (ros_to_serial) StdoutLine: {'line': b'Installing serial_read script to /home/irl/robot_ws_raps/install/ros_to_serial/lib/ros_to_serial\n'}
+[7.430139] (ros_to_serial) StdoutLine: {'line': b'Installing serial_write script to /home/irl/robot_ws_raps/install/ros_to_serial/lib/ros_to_serial\n'}
+[7.432246] (ros_to_serial) StdoutLine: {'line': b'\n'}
+[7.433295] (ros_to_serial) StdoutLine: {'line': b'Installed /home/irl/robot_ws_raps/build/ros_to_serial\n'}
+[7.441458] (ros_to_serial) StdoutLine: {'line': b'running symlink_data\n'}
+[7.464211] (-) TimerEvent: {}
+[7.497992] (pwm_msg) CommandEnded: {'returncode': 0}
+[7.564594] (-) TimerEvent: {}
+[7.656178] (pwm_msg) JobEnded: {'identifier': 'pwm_msg', 'rc': 0}
+[7.665867] (-) TimerEvent: {}
+[7.676950] (ros_to_serial) CommandEnded: {'returncode': 0}
+[7.726481] (ros_to_serial) JobEnded: {'identifier': 'ros_to_serial', 'rc': 0}
+[7.733129] (-) EventReactorShutdown: {}

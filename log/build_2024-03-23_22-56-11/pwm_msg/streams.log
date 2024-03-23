@@ -1,0 +1,36 @@
+[4.779s] Invoking command in '/home/irl/robot_ws_raps/build/pwm_msg': PYTHONPATH=/home/irl/robot_ws_raps/build/pwm_msg/prefix_override:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/irl/robot_ws_raps/build/pwm_msg/build --no-deps symlink_data
+[5.286s] Traceback (most recent call last):
+[5.286s]   File "/home/irl/robot_ws_raps/build/pwm_msg/setup.py", line 1, in <module>
+[5.288s]     from setuptools import find_packages, setup
+[5.348s]   File "/home/irl/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 16, in <module>
+[5.350s]     import setuptools.version
+[5.355s]   File "/home/irl/.local/lib/python3.10/site-packages/setuptools/version.py", line 1, in <module>
+[5.359s]     import pkg_resources
+[5.368s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3243, in <module>
+[5.369s]     def _initialize_master_working_set():
+[5.378s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3226, in _call_aside
+[5.383s]     f(*args, **kwargs)
+[5.386s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 3255, in _initialize_master_working_set
+[5.390s]     working_set = WorkingSet._build_master()
+[5.392s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 559, in _build_master
+[5.398s]     ws = cls()
+[5.399s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 552, in __init__
+[5.400s]     self.add_entry(entry)
+[5.402s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 608, in add_entry
+[5.418s]     for dist in find_distributions(entry, True):
+[5.422s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2063, in find_on_path
+[5.424s]     for dist in factory(fullpath):
+[5.424s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2128, in distributions_from_metadata
+[5.424s]     yield Distribution.from_location(
+[5.425s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2588, in from_location
+[5.426s]     return cls(
+[5.427s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 2569, in __init__
+[5.427s]     self._version = safe_version(version)
+[5.428s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/__init__.py", line 1318, in safe_version
+[5.429s]     return str(packaging.version.Version(version))
+[5.430s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 321, in __str__
+[5.430s]     if self.post is not None:
+[5.430s]   File "/home/irl/.local/lib/python3.10/site-packages/pkg_resources/_vendor/packaging/version.py", line 355, in post
+[5.431s]     return self._version.post[1] if self._version.post else None
+[5.431s] KeyboardInterrupt
+[5.433s] Invoked command in '/home/irl/robot_ws_raps/build/pwm_msg' returned '-2': PYTHONPATH=/home/irl/robot_ws_raps/build/pwm_msg/prefix_override:/home/irl/robot_ws_raps/install/pwm_msg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/irl/robot_ws_raps/build/pwm_msg/build --no-deps symlink_data

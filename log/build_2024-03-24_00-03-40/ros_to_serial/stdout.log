@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing ros_to_serial.egg-info/PKG-INFO
+writing dependency_links to ros_to_serial.egg-info/dependency_links.txt
+writing entry points to ros_to_serial.egg-info/entry_points.txt
+writing requirements to ros_to_serial.egg-info/requires.txt
+writing top-level names to ros_to_serial.egg-info/top_level.txt
+reading manifest file 'ros_to_serial.egg-info/SOURCES.txt'
+writing manifest file 'ros_to_serial.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/irl/robot_ws_raps/install/ros_to_serial/lib/python3.10/site-packages/ros-to-serial.egg-link (link to .)
+Installing Serial_read script to /home/irl/robot_ws_raps/install/ros_to_serial/lib/ros_to_serial
+
+Installed /home/irl/robot_ws_raps/build/ros_to_serial
+running symlink_data
