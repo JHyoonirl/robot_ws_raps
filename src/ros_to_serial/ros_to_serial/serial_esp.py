@@ -4,13 +4,6 @@ from rclpy.qos import QoSProfile
 from std_msgs.msg import String
 import serial
 
-ser = serial.Serial(
-            '/dev/ttyUSB0',
-            baudrate=115200,
-            parity=serial.PARITY_NONE,
-            stopbits=serial.STOPBITS_ONE,
-            bytesize=serial.EIGHTBITS,
-            timeout=0)
 
 # sudo dmesg | grep tty :: usb 포트를 확인하는 코드
 '''
