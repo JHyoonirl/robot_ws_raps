@@ -23,6 +23,7 @@ setup(
             'serial_read = ros_to_serial.serial_read:main',
             'serial_write = ros_to_serial.serial_write:main',
             'serial_esp = ros_to_serial.serial_esp:main',
+            'serial_FT = ros_to_serial.serial_FT:main',
         ],
     },
 )

@@ -15,7 +15,7 @@ class ESP32Board(Node):
         super().__init__('esp_serial')
         qos_profile = QoSProfile(depth=10)
         ser = serial.Serial(
-            '/dev/ttyUSB0',
+            '/dev/ttyS0',
             baudrate=115200,
             parity=serial.PARITY_NONE,
             stopbits=serial.STOPBITS_ONE,
