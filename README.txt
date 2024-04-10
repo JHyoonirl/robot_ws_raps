@@ -5,7 +5,7 @@ ROS2
 source /opt/ros/humble/setup.bash
 source ~/robot_ws_raps/install/local_setup.bash
 
-alias cb='cd ~/robot_ws_raps && colcon build --symlink-install && . install/local_setup.sh'
+alias cb='cd ~/robot_ws_raps && colcon build --symlink-install && . install/local_setup.bash'
 alias cs='cd ~/robot_ws_raps/src'
 alias rt='ros2 topic list'
 alias testpub='ros2 run demo_nodes_py talker'
