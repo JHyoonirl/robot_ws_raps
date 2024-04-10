@@ -1,3 +1,0 @@
-[console_scripts]
-pwm_subscriber = pwm_msg.pwm_subscriber:main
-
