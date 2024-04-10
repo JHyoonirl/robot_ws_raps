@@ -13,7 +13,8 @@ import time
 class FTsensor(Node):
     ##### Publisher와 Subscriber를 정의, Serial Port 정보를 정의
     def __init__(self):
-        super().__init__('esp_serial')
+        super().__init__('serial_FT')
+
         qos_profile = QoSProfile(depth=10)
         ser = serial.Serial(
         port='/dev/ttyUSB0',\
@@ -22,9 +23,7 @@ class FTsensor(Node):
         stopbits=serial.STOPBITS_ONE,\
         bytesize=serial.EIGHTBITS,\
         timeout=0)
-        print(ser.portstr) #연결된 포트 확인.
         self.ser = ser
-
 
         self.data_read = [0x0A, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
         self.data_bias = [0x11, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
@@ -34,9 +33,13 @@ class FTsensor(Node):
         
         self.status = False
 
-        self.FT_data = self.create_publisher(
+        self.force_data = self.create_publisher(
             String,
-            'FT_data',
+            'force_data',
+            qos_profile)
+        self.torque_data = self.create_publisher(
+            String,
+            'torque_data',
             qos_profile)
         
         self.FT_serial()
@@ -53,14 +56,17 @@ class FTsensor(Node):
     #  --------------   Publisher def 정의 -------------
 
     def publish_FT_sensor(self):
-        FT_data = String()
+        force = String()
+        torque = String()
         self.send_data_without_read(self.data_read)
         read_msg = self.ser.read(19)
-        decoded_data = self.decode_received_data(read_msg)
-        if decoded_data != False:
-            FT_data.data = str(self.decode_received_data(read_msg))
-            self.FT_data.publish(FT_data)
-            self.get_logger().info("FT read: {0}".format(FT_data.data))
+        force_decoded_data, torque_decoded_data = self.decode_received_data(read_msg)
+        if force_decoded_data != False:
+            force.data = str(force_decoded_data)
+            torque.data = str(torque_decoded_data)
+            self.force_data.publish(force)
+            self.torque_data.publish(torque)
+            self.get_logger().info("FT read: {0}, {1}".format(force.data, torque.data))
         
     # -------------  공통 사용 함수 정의 -----------
         
@@ -108,11 +114,11 @@ class FTsensor(Node):
                     torque.append(int.from_bytes(torque_temp, "big", signed=True) / 2000)
                 # 여기서 데이터 처리를 수행하거나 필요한 작업을 수행할 수 있습니다.
                 # print(force)
-            return torque
+            return force, torque
             # else:
                 # print("Incomplete packet received")
         except:
-            return False
+            return False, False
         
     def send_data_with_read(self, data):
         """
