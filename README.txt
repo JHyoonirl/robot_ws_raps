@@ -2,7 +2,7 @@
 bash 파일에 설정해야 하는 것
 ROS2
 
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 source ~/robot_ws_raps/install/local_setup.bash
 
 alias cb='cd ~/robot_ws_raps && colcon build --symlink-install && . install/local_setup.bash'
