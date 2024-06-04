@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
             'serial_read = ros_to_serial.serial_read:main',
             'serial_write = ros_to_serial.serial_write:main',
-            'serial_esp = ros_to_serial.serial_esp:main',
+            'serial_esp_1 = ros_to_serial.serial_esp_1:main',
+            'serial_esp_2 = ros_to_serial.serial_esp_2:main',
             'serial_FT = ros_to_serial.serial_FT:main',
         ],
     },

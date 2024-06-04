@@ -15,7 +15,7 @@ class ESP32Board(Node):
         super().__init__('esp_serial')
         qos_profile = QoSProfile(depth=10)
         ser = serial.Serial(
-            '/dev/ttyS0',
+            '/dev/ttyAMA0',
             baudrate=115200,
             parity=serial.PARITY_NONE,
             stopbits=serial.STOPBITS_ONE,
@@ -28,18 +28,18 @@ class ESP32Board(Node):
 
         self.i2c_write = self.create_publisher(
             String,
-            'i2c_serial',
+            'i2c_serial_2',
             qos_profile)
         
         self.pwm_read = self.create_subscription(
             String,
-            'pwm_write',
+            'pwm_write_2',
             self.pwm_reader,
             qos_profile)
         
         self.esp_serial()
         if self.status:
-            self.create_timer(0.01, self.publish_serial)
+            self.create_timer(0.02, self.publish_serial)
 
 
     #  --------------   Publisher def 정의 -------------
@@ -47,9 +47,11 @@ class ESP32Board(Node):
     def publish_serial(self):
         i2c_data = String()
         EncodeData = self.ser.readline().decode()[0:-1]
+        # print(EncodeData)
         i2c_data.data = str(EncodeData)
         self.i2c_write.publish(i2c_data)
         self.get_logger().info("i2c read: {0}".format(i2c_data.data))
+        
 
     # -------------   Subscriber def 정의 ---------------
         
