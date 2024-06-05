@@ -14,7 +14,7 @@ import serial
 class ESP32Board(Node):
     ##### Publisher와 Subscriber를 정의, Serial Port 정보를 정의
     def __init__(self):
-        super().__init__('esp_serial')
+        super().__init__('esp_IMU')
         qos_profile = QoSProfile(depth=10)
         ser = serial.Serial(
             '/dev/ttyAMA1',
@@ -36,12 +36,12 @@ class ESP32Board(Node):
         
         self.esp_serial()
         if self.status:
-            self.create_timer(0.01, self.publish_serial)
+            self.create_timer(0.01, self.publish_Imu)
 
 
     #  --------------   Publisher def 정의 -------------
 
-    def publish_serial(self):
+    def publish_Imu(self):
         imu_data = Vector3()
         EncodeData = ""
         EncodedData_indexes = []
@@ -80,7 +80,7 @@ class ESP32Board(Node):
                 imu_data.z = float(data)
         
         self.i2c_write.publish(imu_data)
-        self.get_logger().info("i2c read_1: {0}".format(imu_data))
+        self.get_logger().info("IMU read: {0}".format(imu_data))
         
 
     # -------------   Subscriber def 정의 ---------------
