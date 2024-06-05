@@ -39,7 +39,7 @@ class ESP32Board(Node):
         
         self.esp_serial()
         if self.status:
-            self.create_timer(0.02, self.publish_serial)
+            self.create_timer(0.05, self.publish_serial)
 
 
     #  --------------   Publisher def 정의 -------------
@@ -50,7 +50,7 @@ class ESP32Board(Node):
         # print(EncodeData)
         i2c_data.data = str(EncodeData)
         self.i2c_write.publish(i2c_data)
-        self.get_logger().info("i2c read: {0}".format(i2c_data.data))
+        self.get_logger().info("i2c read_1: {0}".format(i2c_data.data))
         
 
     # -------------   Subscriber def 정의 ---------------
