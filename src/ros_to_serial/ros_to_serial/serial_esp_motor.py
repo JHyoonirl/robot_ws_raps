@@ -38,18 +38,18 @@ class ESP32Board(Node):
                         'pwm_signal',
                         self.pwm_reader,
                         qos_profile)
-            # self.create_timer(0.05, self.publish_serial)
+        self.create_timer(0.01, self.serial_read)
 
 
     #  --------------   Publisher def 정의 -------------
 
-    # def publish_serial(self):
-    #     i2c_data = String()
-    #     EncodeData = self.ser.readline().decode()[0:-1]
-    #     # print(EncodeData)
-    #     i2c_data.data = str(EncodeData)
-    #     self.i2c_write.publish(i2c_data)
-    #     self.get_logger().info("i2c read_1: {0}".format(i2c_data.data))
+    def serial_read(self):
+        # i2c_data = String()
+        EncodeData = self.ser.readline().decode()[0:-1]
+        # print(EncodeData)
+        # i2c_data.data = str(EncodeData)
+        # self.i2c_write.publish(i2c_data)
+        self.get_logger().info("serial read: {0}".format(EncodeData))
         
 
     # -------------   Subscriber def 정의 ---------------
@@ -65,7 +65,7 @@ class ESP32Board(Node):
         Trans="Q" + send_data + "W"
         Trans= Trans.encode()
         self.ser.write(Trans)
-        self.get_logger().info('pwm signal: {0}'.format(send_data))
+        # self.get_logger().info('pwm signal: {0}'.format(send_data))
         
     # -------------  공통 사용 함수 정의 -----------
         
