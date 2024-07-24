@@ -32,7 +32,7 @@ class ESP32Board(Node):
             'imu_data',
             qos_profile)
         
-        self.imu_data_list = [0, 0, 0]
+        self.imu_data_list = [0, 0, 0, 0] # imu number / roll / pitch / yaw
         
         self.esp_serial()
         if self.status:
@@ -49,19 +49,18 @@ class ESP32Board(Node):
         # raw_data_index = []
         data_list = []
         EncodeData = self.ser.readline().decode()[0:-1]
-        # print(EncodeData)
-        find_index_list = ["roll:", "pitch:", "yaw:"]    
+        find_index_list = ["imu", "r", "p", "y"]    
 
-        for i, find_index in enumerate(find_index_list):
+        for i, find_index in enumerate(find_index_list): # index number(start with 0) / string to find out( ex: imu)
             EncodedData_indexes.append(EncodeData.find(find_index))
 
-        for i, EncodedData_index in enumerate(EncodedData_indexes):
-            if i == 2:
+        for i, EncodedData_index in enumerate(EncodedData_indexes): # EncodData_index = [0, 4, 8, 10]
+            if i == 3:
                 raw_data = EncodeData[EncodedData_index:-1]
             else:
                 raw_data = EncodeData[EncodedData_index:EncodedData_indexes[i+1]]
             raw_data_index = raw_data.find(":")
-            data_list.append(raw_data[raw_data_index+1:-1])
+            data_list.append(raw_data[raw_data_index+1:])
         for i, data in enumerate(data_list):
             # status = False
             try:
@@ -72,25 +71,16 @@ class ESP32Board(Node):
                 pass
 
         for i, data in enumerate(self.imu_data_list):
-            if i == 0:
+            if i == 1:
                 imu_data.x = float(data)
-            elif i == 1:
-                imu_data.y = float(data)
             elif i == 2:
+                imu_data.y = float(data)
+            elif i == 3:
                 imu_data.z = float(data)
         
         self.i2c_write.publish(imu_data)
         self.get_logger().info("IMU read: {0}".format(imu_data))
         
-
-    # -------------   Subscriber def 정의 ---------------
-        
-    def pwm_reader(self, msg):
-        send_data = str(msg.data)
-        Trans="Q" + send_data + "W"
-        Trans= Trans.encode()
-        self.ser.write(Trans)
-        # self.get_logger().info('pwm write: {0}'.format(msg.data))
         
     # -------------  공통 사용 함수 정의 -----------
         
