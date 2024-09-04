@@ -14,10 +14,15 @@ import serial
 class ESP32Board(Node):
     ##### Publisher와 Subscriber를 정의, Serial Port 정보를 정의
     def __init__(self):
-        super().__init__('esp_IMU')
+        super().__init__('IMU_node')
         qos_profile = QoSProfile(depth=10)
+        
+        self.declare_parameter('usb_port', '/dev/ttyUSB0')  # 기본값을 제공
+
+        usb_port = self.get_parameter('usb_port').get_parameter_value().string_value
+        
         ser = serial.Serial(
-            '/dev/ttyAMA1',
+            port = usb_port,
             baudrate=115200,
             parity=serial.PARITY_NONE,
             stopbits=serial.STOPBITS_ONE,

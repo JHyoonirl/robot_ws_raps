@@ -1,6 +1,11 @@
+
+import glob
+import os
+
 from setuptools import find_packages, setup
 
 package_name = 'ros_to_serial'
+share_dir = 'share/' + package_name
 
 setup(
     name=package_name,
@@ -10,6 +15,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (share_dir + '/launch', glob.glob(os.path.join('launch','*.launch.py')),)
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -22,8 +28,8 @@ setup(
         'console_scripts': [
             'serial_read = ros_to_serial.serial_read:main',
             'serial_write = ros_to_serial.serial_write:main',
-            'serial_esp_motor = ros_to_serial.serial_esp_motor:main',
-            'serial_esp_imu = ros_to_serial.serial_esp_imu:main',
+            'esp_motor = ros_to_serial.esp_motor:main',
+            'esp_imu = ros_to_serial.esp_imu:main',
             'serial_FT = ros_to_serial.serial_FT:main',
         ],
     },
