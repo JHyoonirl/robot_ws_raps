@@ -34,7 +34,7 @@ class ESP32Board(Node):
 
         self.i2c_write = self.create_publisher(
             Vector3,
-            'imu_data',
+            'imu_data_shank',
             qos_profile)
         
         self.imu_data_list = [0, 0, 0, 0] # imu number / roll / pitch / yaw
@@ -84,7 +84,7 @@ class ESP32Board(Node):
                 imu_data.z = float(data)
         
         self.i2c_write.publish(imu_data)
-        self.get_logger().info("IMU read: {0}".format(imu_data))
+        # self.get_logger().info("IMU read: {0}".format(imu_data))
         
         
     # -------------  공통 사용 함수 정의 -----------

@@ -5,10 +5,10 @@ from custominterface.srv import Status
 from std_msgs.msg import String, Float64
 import serial
 
-class PwmServer(Node):
+class thrusterServer(Node):
 
     def __init__(self):
-        super().__init__('motor_node')
+        super().__init__('thruster_node')
         qos_profile = QoSProfile(depth=10)
 
         self.declare_parameter('usb_port', '/dev/ttyUSB0')  # 기본값을 제공
@@ -26,50 +26,56 @@ class PwmServer(Node):
         self.status = False
         self.esp_serial()
 
-        self.resolution = 16
-        # self.pwm_range = pow(2,16)
-        # pwm initialize
-        self.pwm_neut = int(50)
-        self.pwm = self.pwm_neut
+        self.resolution = 12
+        # self.thruster_range = pow(2,16)
+        # thruster initialize
+        self.thruster_neut = float(50)
+        self.thruster = self.thruster_neut
         self.srv = self.create_service(
             Status,
-            'pwm_server',
-            self.pwm_server
+            'thruster_server',
+            self.thruster_server
         )
         
-        self.pwm_publisher = self.create_subscription(
+        self.thruster_publisher = self.create_subscription(
             Float64,
-            'pwm_signal',
-            self.pwm_subscriber,
+            'thruster_signal',
+            self.thruster_subscriber,
             qos_profile)
         
-        self.create_timer(0.01, self.serial_read)
+        self.create_timer(0.005, self.serial_read)
 
-    def pwm_server(self, request, response):
-        if request.pwm_switch == True:
-            response.pwm_result = True
-        elif request.pwm_switch == False:
-            response.pwm_result = False
-        self.response = response.pwm_result
-        print(self.response)
+    def thruster_server(self, request, response):
+        if request.thruster_switch == True:
+            response.thruster_result = True
+        elif request.thruster_switch == False:
+            response.thruster_result = False
+        self.response = response.thruster_result
+        # print(self.response)
         return response
 
-    def pwm_subscriber(self, msg):
-        # self.get_logger().info('Subscribed pwm: {0}'.format(msg.data))
-        self.pwm_signal = str(msg.data)
+    def thruster_subscriber(self, msg):
+        # self.get_logger().info('Subscribed thruster: {0}'.format(msg.data))
+        thruster_signal = str(self.scaling_fcn(msg.data))
         if self.status:
-            self.pwm_trans()
-          
-    def pwm_trans(self):
-        send_data = self.pwm_signal
+            self.thruster_trans(thruster_signal)
+        else:
+            self.thruster_trans(str(int(self.scaling_fcn(50))))
+
+    def scaling_fcn(self, signal):
+        return int(signal * 10000)
+    
+    def thruster_trans(self, signal):
+        send_data = signal
         Trans="Q" + send_data + "W"
         Trans= Trans.encode()
         self.ser.write(Trans)
-        # self.get_logger().info('pwm signal: {0}'.format(send_data))
-
-    def serial_read(self):
         EncodeData = self.ser.readline().decode()[0:-1]
         self.get_logger().info("serial read: {0}".format(EncodeData))
+        # self.get_logger().info('thruster signal: {0}'.format(send_data))
+
+    def serial_read(self):
+        pass
 
     def esp_serial(self):
         if self.ser.readable():
@@ -81,7 +87,7 @@ class PwmServer(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = PwmServer()
+    node = thrusterServer()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
