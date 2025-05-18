@@ -17,7 +17,7 @@ setup(
     maintainer_email='face5921@naver.com',
     description='TODO: Package description',
     license='TODO: License declaration',
-    tests_require=['pytest'],
+    # tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'pwm_subscriber = pwm_msg.pwm_subscriber:main'
