@@ -11,6 +11,7 @@ from std_msgs.msg import String, Float64, Float64MultiArray
 from geometry_msgs.msg import Vector3
 
 from custom_module.thruster_torque_converter import thruster_converter
+from custom_module.hydro_compensation import HydroCompensation
 import serial
 import time
 from dataclasses import dataclass
@@ -55,6 +56,8 @@ class thrusterServer(Node):
         self.esp_serial()
 
         self.torque_converter = thruster_converter()
+        self.hydro_compensater = HydroCompensation()
+
         self.thruster_pwm_input = float(50)
 
         self.exercise_desired_trajectory_position_subscriber = self.create_subscription(
@@ -222,13 +225,37 @@ class thrusterServer(Node):
                 return self.power_enabled
 
             if self.control_mode == 3:
-                input = self.torque_converter.torque_to_percentage(self.passive_control_fcn())
-                self.get_logger().info(f'Passive control input: {input}')
-                # self.thruster_duty_ratio_input(input)
+                input_pid_torque = self.passive_pid_control_fcn()
+                input_hydro_torque = self.hydro_compensater.calculate_total_moment(self.imu_knee_velocity_deg, self.imu_knee_acceleration_deg)
+                
+                if self.control_active == 1:
+                    total_input_torque = input_pid_torque - input_hydro_torque
+                else:
+                    total_input_torque = 0
+                
+                # input_pid = self.torque_converter.torque_to_percentage(input_pid_torque)
+                input = self.torque_converter.torque_to_percentage(total_input_torque)
+                
+                self.get_logger().info(f'total input: {input}')
+                self.thruster_duty_ratio_input(input)
             elif self.control_mode == 4:
-                pass
+                ############ imu하고 motor하고 조금 각도가 달라서 이상하게 작동하는 것 같음.
+                if self.control_active == 1:
+                    if self.desired_trajectory_state == 1:
+                        velocity_error_rad = np.deg2rad(self.desired_trajectory_velocity_deg - self.imu_knee_velocity_deg)
+                        input_torque = self.assistance_gain_k * velocity_error_rad
+
+                        self.assistance_err_state = ControlError()
+                    else: #self.desired_trajectory_state == 2:     
+                        input_torque = self.assistance_pid_control_fcn()
+                else:
+                    input_torque = 0
+                input = self.torque_converter.torque_to_percentage(input_torque)
+                self.get_logger().info(f'assistance input: {input}')
+                self.thruster_duty_ratio_input(input)
+     
             elif self.control_mode == 5:
-                pass
+                self.thruster_duty_ratio_input(50)
             else:
                 self.thruster_duty_ratio_input(50)
 
@@ -242,7 +269,7 @@ class thrusterServer(Node):
             return
         
 
-    def passive_control_fcn(self):
+    def passive_pid_control_fcn(self):
         self.dt = time.time() - self.past_time
         self.desired_trajectory_position_rad = np.deg2rad(self.desired_trajectory_position_deg)
         self.imu_knee_angle_rad = np.deg2rad(self.imu_knee_angle_deg)
@@ -267,6 +294,38 @@ class thrusterServer(Node):
             self.passive_err_state.errorintegral = 0.0
             self.passive_err_state.errorprev = 0.0
             self.passive_err_state.errorderivative = 0.0
+            proportional = 0
+            integral = 0
+            derivative = 0
+
+        output = proportional + integral + derivative
+        return output
+
+    def assistance_pid_control_fcn(self):
+        self.dt = time.time() - self.past_time
+        self.desired_trajectory_position_rad = np.deg2rad(self.desired_trajectory_position_deg)
+        self.imu_knee_angle_rad = np.deg2rad(self.imu_knee_angle_deg)
+
+        self.pos_error = self.desired_trajectory_position_rad - self.imu_knee_angle_rad
+        '''
+        rad
+        '''
+
+        gain_p = self.assistance_gains.proportional
+        gain_i = self.assistance_gains.integral
+        gain_d = self.assistance_gains.derivative
+
+        proportional = gain_p * self.pos_error
+        self.assistance_err_state.errorintegral += self.pos_error * self.dt
+        integral = gain_i * self.assistance_err_state.errorintegral
+        derivative = gain_d * (self.pos_error - self.assistance_err_state.errorprev) / self.dt
+
+        self.assistance_err_state.errorprev = self.pos_error
+
+        if self.control_active == 0:
+            self.assistance_err_state.errorintegral = 0.0
+            self.assistance_err_state.errorprev = 0.0
+            self.assistance_err_state.errorderivative = 0.0
             proportional = 0
             integral = 0
             derivative = 0
@@ -361,6 +420,10 @@ class thrusterServer(Node):
     
     def thruster_duty_ratio_input(self, input):
         # self.get_logger().info('Subscribed thruster: {0}'.format(msg.data))
+        if input < 10:
+            input = 10
+        elif input > 93:
+            input = 93
         scaling_input = str(self.scaling_fcn(input))
         if self.status:
             self.thruster_trans(scaling_input)
