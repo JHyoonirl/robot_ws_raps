@@ -29,6 +29,7 @@ setup(
             'serial_read = ros_to_serial.serial_read:main',
             'serial_write = ros_to_serial.serial_write:main',
             'esp_thruster = ros_to_serial.esp_thruster:main',
+            'esp_thruster_test = ros_to_serial.esp_thruster_test:main',
             'esp_imu_one = ros_to_serial.esp_imu_one:main',
             'esp_imu_two = ros_to_serial.esp_imu_two:main',
             'serial_FT = ros_to_serial.serial_FT:main',
